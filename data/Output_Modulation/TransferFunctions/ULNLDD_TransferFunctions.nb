@@ -1,0 +1,588 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 15.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     22202,        578]
+NotebookOptionsPosition[     20119,        536]
+NotebookOutlinePosition[     20522,        552]
+CellTagsIndexPosition[     20479,        549]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Load Misc Functions", "Section",ExpressionUUID->"2059ef66-d6f6-9643-b5ff-000de914809f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PhaseUnrwap", "=", 
+   RowBox[{"ResourceFunction", "[", "\"\<PhaseUnwrap\>\"", "]"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"6c7f0cab-9c47-de46-81e6-2ab67319f8f3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Load Data", "Section",ExpressionUUID->"8698e805-6f95-a543-a3d9-6e7b42386224"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"files", "=", 
+  RowBox[{"FileNames", "[", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<*.csv\>\""}], "}"}], 
+    "]"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"modAmplitude", "=", "0.1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"terminationResistance", "=", "12.87"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"raw", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"First", "@", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{"ff", ",", 
+          RowBox[{
+           RowBox[{"\"\<ULNLDD-\>\"", "~~", 
+            RowBox[{"output", ":", 
+             RowBox[{"Repeated", "[", "WordCharacter", "]"}]}], 
+            "~~", "\"\<-\>\"", "~~", 
+            RowBox[{"modType", ":", 
+             RowBox[{"Repeated", "[", "WordCharacter", "]"}]}], 
+            "~~", "\"\<-TF_\>\""}], ":>", 
+           RowBox[{"{", 
+            RowBox[{"output", ",", "modType"}], "}"}]}]}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Import", "[", "ff", "]"}], "[", 
+        RowBox[{"[", 
+         RowBox[{"12", ";;", 
+          RowBox[{"-", "1"}]}], "]"}], "]"}]}], "\[IndentingNewLine]", "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"ff", ",", "files"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Length", "[", 
+    RowBox[{"#", "[", 
+     RowBox[{"[", 
+      RowBox[{"-", "1"}], "]"}], "]"}], "]"}], "&"}], "/@", "raw"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"#1", ",", 
+       RowBox[{"Transpose", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"#2", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", 
+          RowBox[{
+           RowBox[{"10", "^", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"#2", "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", "2"}], "]"}], "]"}], "/", "20"}], ")"}]}],
+            "*", 
+           RowBox[{"modAmplitude", "/", "terminationResistance"}]}], ",", 
+          RowBox[{"#2", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "3"}], "]"}], "]"}]}], "}"}], "]"}]}], "}"}], 
+     "&"}], "@@@", "raw"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dataUnitful", "=", "data"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dataUnitful", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "2", ",", "All", ",", "2"}], "]"}], "]"}], "*=", 
+   RowBox[{
+    RowBox[{"10", "^", "3"}], "/", "modAmplitude"}]}], ";"}]}], "Input",
+ CellLabel->"In[2]:=",ExpressionUUID->"c5db7e20-b1fe-8042-abdb-1525713bac94"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"\\\\\\\\qomsa.physik.hu-berlin.de\\\\QOM_SHARE\\\\projects\\\\\
+ROSC\\\\Data\\\\Thematic \
+Structure\\\\ULNLDD_v0_3\\\\Modulation\\\\TransferFunctions\\\\ULNLDD-100u-AC-\
+TF_20261105_105413_Traces.csv\"\>", 
+   ",", "\<\"\\\\\\\\qomsa.physik.hu-berlin.de\\\\QOM_SHARE\\\\projects\\\\\
+ROSC\\\\Data\\\\Thematic \
+Structure\\\\ULNLDD_v0_3\\\\Modulation\\\\TransferFunctions\\\\ULNLDD-100u-DC-\
+TF_20261105_105725_Traces.csv\"\>", 
+   ",", "\<\"\\\\\\\\qomsa.physik.hu-berlin.de\\\\QOM_SHARE\\\\projects\\\\\
+ROSC\\\\Data\\\\Thematic \
+Structure\\\\ULNLDD_v0_3\\\\Modulation\\\\TransferFunctions\\\\ULNLDD-100u-\
+JFET-TF_20261105_114447_Traces.csv\"\>", 
+   ",", "\<\"\\\\\\\\qomsa.physik.hu-berlin.de\\\\QOM_SHARE\\\\projects\\\\\
+ROSC\\\\Data\\\\Thematic \
+Structure\\\\ULNLDD_v0_3\\\\Modulation\\\\TransferFunctions\\\\ULNLDD-10u-AC-\
+TF_20261104_181558_Traces.csv\"\>", 
+   ",", "\<\"\\\\\\\\qomsa.physik.hu-berlin.de\\\\QOM_SHARE\\\\projects\\\\\
+ROSC\\\\Data\\\\Thematic \
+Structure\\\\ULNLDD_v0_3\\\\Modulation\\\\TransferFunctions\\\\ULNLDD-10u-DC-\
+TF_20261104_181328_Traces.csv\"\>", 
+   ",", "\<\"\\\\\\\\qomsa.physik.hu-berlin.de\\\\QOM_SHARE\\\\projects\\\\\
+ROSC\\\\Data\\\\Thematic \
+Structure\\\\ULNLDD_v0_3\\\\Modulation\\\\TransferFunctions\\\\ULNLDD-10u-\
+JFET-TF_20261104_174716_Traces.csv\"\>", 
+   ",", "\<\"\\\\\\\\qomsa.physik.hu-berlin.de\\\\QOM_SHARE\\\\projects\\\\\
+ROSC\\\\Data\\\\Thematic \
+Structure\\\\ULNLDD_v0_3\\\\Modulation\\\\TransferFunctions\\\\ULNLDD-150u-AC-\
+TF_20261105_135736_Traces.csv\"\>", 
+   ",", "\<\"\\\\\\\\qomsa.physik.hu-berlin.de\\\\QOM_SHARE\\\\projects\\\\\
+ROSC\\\\Data\\\\Thematic \
+Structure\\\\ULNLDD_v0_3\\\\Modulation\\\\TransferFunctions\\\\ULNLDD-150u-DC-\
+TF_20261105_140017_Traces.csv\"\>", 
+   ",", "\<\"\\\\\\\\qomsa.physik.hu-berlin.de\\\\QOM_SHARE\\\\projects\\\\\
+ROSC\\\\Data\\\\Thematic \
+Structure\\\\ULNLDD_v0_3\\\\Modulation\\\\TransferFunctions\\\\ULNLDD-150u-\
+JFET-TF_20261105_121341_Traces.csv\"\>", 
+   ",", "\<\"\\\\\\\\qomsa.physik.hu-berlin.de\\\\QOM_SHARE\\\\projects\\\\\
+ROSC\\\\Data\\\\Thematic \
+Structure\\\\ULNLDD_v0_3\\\\Modulation\\\\TransferFunctions\\\\ULNLDD-Direct-\
+AC-TF_20261104_155450_Traces.csv\"\>", 
+   ",", "\<\"\\\\\\\\qomsa.physik.hu-berlin.de\\\\QOM_SHARE\\\\projects\\\\\
+ROSC\\\\Data\\\\Thematic \
+Structure\\\\ULNLDD_v0_3\\\\Modulation\\\\TransferFunctions\\\\ULNLDD-Direct-\
+DC-TF_20261104_155925_Traces.csv\"\>", 
+   ",", "\<\"\\\\\\\\qomsa.physik.hu-berlin.de\\\\QOM_SHARE\\\\projects\\\\\
+ROSC\\\\Data\\\\Thematic \
+Structure\\\\ULNLDD_v0_3\\\\Modulation\\\\TransferFunctions\\\\ULNLDD-Direct-\
+JFET-TF_20261104_165515_Traces.csv\"\>"}], "}"}]], "Output",
+ CellLabel->"Out[2]=",ExpressionUUID->"78d9520f-f807-c246-86b3-f4283c540c64"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1024", ",", "1024", ",", "1024", ",", "1024", ",", "1024", ",", "1024", ",",
+    "1024", ",", "1024", ",", "1024", ",", "1024", ",", "1024", ",", "1024"}],
+   "}"}]], "Output",
+ CellLabel->"Out[6]=",ExpressionUUID->"8d55fe6a-6918-e349-9c09-cbbf374c243c"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"ListLogLogPlot", "[", 
+  RowBox[{
+   RowBox[{"dataUnitful", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", 
+      RowBox[{"-", "1"}], ",", "All", ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Joined", "->", "True"}], ",", 
+   RowBox[{"PlotRange", "->", "All"}], ",", 
+   RowBox[{"GridLines", "->", "Full"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"PlotLegends", "->", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], ")"}], "&"}], "@@@", 
+      RowBox[{"dataUnitful", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"FrameLabel", "->", 
+    RowBox[{"Thread", "[", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<frequency f / Hz\>\"", 
+         ",", "\"\<transconductance dI/dV / mA/V\>\""}], "}"}], ",", "14"}], 
+      "]"}], "]"}]}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellLabel->"In[10]:=",ExpressionUUID->"144dc8d5-cbee-6647-a824-0a6508277008"],
+
+Cell[BoxData[
+ RowBox[{"ListLogLinearPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Transpose", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"#", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", 
+        RowBox[{"PhaseUnrwap", "[", 
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "2"}], "]"}], "]"}], ",", "180"}], "]"}]}], 
+       "}"}], "]"}], "&"}], "/@", 
+    RowBox[{"dataUnitful", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", 
+       RowBox[{"-", "1"}], ",", "All", ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "3"}], "}"}]}], "]"}], "]"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Joined", "->", "True"}], ",", 
+   RowBox[{"PlotRange", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", 
+        RowBox[{"5", "*", 
+         RowBox[{"10", "^", "8"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "720"}], ",", "100"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"GridLines", "->", "Full"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"PlotLegends", "->", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], ")"}], "&"}], "@@@", 
+      RowBox[{"dataUnitful", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"FrameLabel", "->", 
+    RowBox[{"Thread", "[", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<frequency f / Hz\>\"", 
+         ",", "\"\<modulation phase \[Phi] / \[Degree]\>\""}], "}"}], ",", 
+       "14"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellLabel->"In[11]:=",ExpressionUUID->"4ea6b16b-d3d9-6b4a-a82b-9e839d4c8650"],
+
+Cell[CellGroupData[{
+
+Cell["Plot Individual Modulations", "Subsubsection",ExpressionUUID->"3fb99227-1441-b94b-b33b-2d9d6b02284d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"modDC", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"dataUnitful", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "2"}], "]"}], "]"}], "==", "\"\<DC\>\""}], "&"}]}],
+     "]"}]}], ";", 
+  RowBox[{"Length", "[", "modDC", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"modAC", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"dataUnitful", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "2"}], "]"}], "]"}], "==", "\"\<AC\>\""}], "&"}]}],
+     "]"}]}], ";", 
+  RowBox[{"Length", "[", "modAC", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"modJFET", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"dataUnitful", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "2"}], "]"}], "]"}], "==", "\"\<JFET\>\""}], 
+      "&"}]}], "]"}]}], ";", 
+  RowBox[{"Length", "[", "modJFET", "]"}]}]}], "Input",
+ CellLabel->"In[12]:=",ExpressionUUID->"6117fd20-196d-6d4d-ac15-7e48bd638df2"],
+
+Cell[BoxData["4"], "Output",
+ CellLabel->"Out[12]=",ExpressionUUID->"52859356-0eba-c047-b962-e779c9b726aa"],
+
+Cell[BoxData["4"], "Output",
+ CellLabel->"Out[13]=",ExpressionUUID->"f68adaf4-e289-6d41-ab25-f3ec69fe074a"],
+
+Cell[BoxData["4"], "Output",
+ CellLabel->"Out[14]=",ExpressionUUID->"a3617972-502f-1544-85ab-e0e4fa28f0f6"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"gImgPaddigns", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"60", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"50", ",", "5"}], "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gOptPlotStyles", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Directive", "[", 
+      RowBox[{
+       RowBox[{"ColorData", "[", 
+        RowBox[{"97", ",", "#"}], "]"}], ",", 
+       RowBox[{"Switch", "[", 
+        RowBox[{"#", ",", "1", ",", 
+         RowBox[{"Thickness", "[", "0.01", "]"}], ",", "2", ",", 
+         RowBox[{"Unevaluated", "@", 
+          RowBox[{"Sequence", "[", "]"}]}], ",", "3", ",", "Dashed", ",", "_",
+          ",", "DotDashed"}], "]"}]}], "]"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"Max", "[", 
+      RowBox[{
+       RowBox[{"Length", "[", "modDC", "]"}], ",", 
+       RowBox[{"Length", "[", "modAC", "]"}], ",", 
+       RowBox[{"Length", "[", "modJFET", "]"}]}], "]"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"g", "=", 
+  RowBox[{"Grid", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"ddTitle", ",", "ddTFDatas"}], "}"}], "=", "dds"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Grid", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"Style", "[", 
+             RowBox[{"ddTitle", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"FontSize", "->", "22"}], ",", 
+                RowBox[{"FontWeight", "->", "Bold"}]}], "}"}]}], "]"}], "}"}],
+            ",", 
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{"ListLogLogPlot", "[", 
+             RowBox[{
+              RowBox[{"ddTFDatas", "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", 
+                 RowBox[{"-", "1"}], ",", "All", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", "2"}], "}"}]}], "]"}], "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Joined", "->", "True"}], ",", 
+              RowBox[{"PlotRange", "->", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", 
+                   RowBox[{"5", "*", 
+                    RowBox[{"10", "^", "8"}]}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0.01", ",", "100"}], "}"}]}], "}"}]}], ",", 
+              RowBox[{"GridLines", "->", "Full"}], ",", 
+              RowBox[{"ImageSize", "->", "Medium"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"PlotLegends", "->", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], ")"}], 
+                  "&"}], "@@@", 
+                 RowBox[{"ddTFDatas", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"PlotStyle", "->", "gOptPlotStyles"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"FrameLabel", "->", 
+               RowBox[{"Thread", "[", 
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   
+                   RowBox[{"\"\<frequency f / Hz\>\"", 
+                    ",", "\"\<transconductance dI/dV / mA/V\>\""}], "}"}], ",",
+                   "14"}], "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+              RowBox[{"ImagePadding", "->", "gImgPaddigns"}]}], 
+             "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "}"}], ",", 
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{"ListLogLinearPlot", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{
+                RowBox[{"Transpose", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"#", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", 
+                   RowBox[{"PhaseUnrwap", "[", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"All", ",", "2"}], "]"}], "]"}], ",", "180"}], 
+                    "]"}]}], "}"}], "]"}], "&"}], "/@", 
+               RowBox[{"ddTFDatas", "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", 
+                  RowBox[{"-", "1"}], ",", "All", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"1", ",", "3"}], "}"}]}], "]"}], "]"}]}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Joined", "->", "True"}], ",", 
+              RowBox[{"PlotRange", "->", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", 
+                   RowBox[{"5", "*", 
+                    RowBox[{"10", "^", "8"}]}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "720"}], ",", "100"}], "}"}]}], "}"}]}], ",", 
+              RowBox[{"GridLines", "->", "Full"}], ",", 
+              RowBox[{"ImageSize", "->", "Medium"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"PlotLegends", "->", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], ")"}], 
+                  "&"}], "@@@", 
+                 RowBox[{"ddTFDatas", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"PlotStyle", "->", "gOptPlotStyles"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"FrameLabel", "->", 
+               RowBox[{"Thread", "[", 
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   
+                   RowBox[{"\"\<frequency f / Hz\>\"", 
+                    ",", "\"\<modulation phase \[Phi] / \[Degree]\>\""}], 
+                   "}"}], ",", "14"}], "]"}], "]"}]}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"ImagePadding", "->", "gImgPaddigns"}]}], 
+             "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "}"}]}], 
+          "}"}], "]"}]}], "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"dds", ",", 
+         RowBox[{"Transpose", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"\"\<DC\>\"", ",", "\"\<AC\>\"", ",", "\"\<JFET\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"modDC", ",", "modAC", ",", "modJFET"}], "}"}]}], "}"}], 
+          "]"}]}], "}"}]}], "]"}], "}"}], ",", 
+    RowBox[{"Frame", "->", "All"}]}], "]"}]}]}], "Input",
+ CellLabel->"In[21]:=",ExpressionUUID->"c915e4e7-31d4-1247-9832-8eab5f035bdb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], 
+      ",", "\"\<Results_TransferFunctions.pdf\>\""}], "}"}], "]"}], ",", 
+   "g"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], 
+      ",", "\"\<Results_TransferFunctions.png\>\""}], "}"}], "]"}], ",", 
+   RowBox[{"Rasterize", "[", 
+    RowBox[{"g", ",", 
+     RowBox[{"RasterSize", "->", "2048"}]}], "]"}]}], "]"}]}], "Input",
+ CellLabel->"In[24]:=",ExpressionUUID->"b3fa371c-4c4b-1c47-b7df-6fc8af36d6e2"],
+
+Cell[BoxData["\<\"\\\\\\\\qomsa.physik.hu-berlin.de\\\\QOM_SHARE\\\\projects\\\
+\\ROSC\\\\Data\\\\Thematic \
+Structure\\\\ULNLDD_v0_3\\\\Modulation\\\\TransferFunctions\\\\Results_\
+TransferFunctions.pdf\"\>"], "Output",
+ CellLabel->"Out[24]=",ExpressionUUID->"956d4672-990b-494e-9d45-274b1fb62b69"],
+
+Cell[BoxData["\<\"\\\\\\\\qomsa.physik.hu-berlin.de\\\\QOM_SHARE\\\\projects\\\
+\\ROSC\\\\Data\\\\Thematic \
+Structure\\\\ULNLDD_v0_3\\\\Modulation\\\\TransferFunctions\\\\Results_\
+TransferFunctions.png\"\>"], "Output",
+ CellLabel->"Out[25]=",ExpressionUUID->"eb929593-0321-af42-bc15-ebbeb562c5e3"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 1012},
+WindowMargins->{{-5.5, Automatic}, {Automatic, -5.5}},
+FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (May 19, 2026)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"a80f791b-6b87-6e43-8723-1fd804e29073"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 93, 0, 66, "Section",ExpressionUUID->"2059ef66-d6f6-9643-b5ff-000de914809f"],
+Cell[672, 24, 220, 5, 28, "Input",ExpressionUUID->"6c7f0cab-9c47-de46-81e6-2ab67319f8f3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[929, 34, 83, 0, 66, "Section",ExpressionUUID->"8698e805-6f95-a543-a3d9-6e7b42386224"],
+Cell[CellGroupData[{
+Cell[1037, 38, 2836, 80, 218, "Input",ExpressionUUID->"c5db7e20-b1fe-8042-abdb-1525713bac94"],
+Cell[3876, 120, 2790, 50, 241, "Output",ExpressionUUID->"78d9520f-f807-c246-86b3-f4283c540c64"],
+Cell[6669, 172, 297, 6, 32, "Output",ExpressionUUID->"8d55fe6a-6918-e349-9c09-cbbf374c243c"]
+}, Open  ]],
+Cell[6981, 181, 1159, 31, 104, "Input",ExpressionUUID->"144dc8d5-cbee-6647-a824-0a6508277008"],
+Cell[8143, 214, 1845, 54, 104, "Input",ExpressionUUID->"4ea6b16b-d3d9-6b4a-a82b-9e839d4c8650"],
+Cell[CellGroupData[{
+Cell[10013, 272, 107, 0, 43, "Subsubsection",ExpressionUUID->"3fb99227-1441-b94b-b33b-2d9d6b02284d"],
+Cell[CellGroupData[{
+Cell[10145, 276, 1102, 34, 66, "Input",ExpressionUUID->"6117fd20-196d-6d4d-ac15-7e48bd638df2"],
+Cell[11250, 312, 107, 1, 32, "Output",ExpressionUUID->"52859356-0eba-c047-b962-e779c9b726aa"],
+Cell[11360, 315, 107, 1, 32, "Output",ExpressionUUID->"f68adaf4-e289-6d41-ab25-f3ec69fe074a"],
+Cell[11470, 318, 107, 1, 32, "Output",ExpressionUUID->"a3617972-502f-1544-85ab-e0e4fa28f0f6"]
+}, Open  ]],
+Cell[11592, 322, 7153, 174, 427, "Input",ExpressionUUID->"c915e4e7-31d4-1247-9832-8eab5f035bdb"],
+Cell[CellGroupData[{
+Cell[18770, 500, 705, 19, 47, "Input",ExpressionUUID->"b3fa371c-4c4b-1c47-b7df-6fc8af36d6e2"],
+Cell[19478, 521, 299, 4, 32, "Output",ExpressionUUID->"956d4672-990b-494e-9d45-274b1fb62b69"],
+Cell[19780, 527, 299, 4, 32, "Output",ExpressionUUID->"eb929593-0321-af42-bc15-ebbeb562c5e3"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
