@@ -1,0 +1,1614 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 15.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     59404,       1604]
+NotebookOptionsPosition[     55926,       1538]
+NotebookOutlinePosition[     56323,       1554]
+CellTagsIndexPosition[     56280,       1551]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Misc Functions", "Section",ExpressionUUID->"3f846886-2856-3f45-af33-ed81be9f8511"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SearchOrderedList", "=", 
+  RowBox[{
+  "ResourceFunction", "[", "\"\<SearchOrderedList\>\"", "]"}]}]], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"92c2331f-8a7b-3643-b227-9ca3b0b34d2c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TagBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     FrameBox[
+      PaneSelectorBox[{False->GridBox[{
+         {
+          PaneBox[GridBox[{
+             {
+              StyleBox[
+               StyleBox[
+                AdjustmentBox["\<\"[\[FilledSmallSquare]]\"\>",
+                 BoxBaselineShift->-0.25,
+                 BoxMargins->{{0, 0}, {-1, -1}}], "ResourceFunctionIcon",
+                
+                FontColor->RGBColor[
+                 0.8745098039215686, 0.2784313725490196, 0.03137254901960784]],
+               ShowStringCharacters->False,
+               FontFamily->"Source Sans Pro Black",
+               FontSize->0.6538461538461539 Inherited,
+               FontWeight->"Heavy",
+               PrivateFontOptions->{"OperatorSubstitution"->False}], 
+              StyleBox[
+               RowBox[{
+                StyleBox["SearchOrderedList", "ResourceFunctionLabel"], " "}],
+               ShowAutoStyles->False,
+               ShowStringCharacters->False,
+               FontSize->Rational[12, 13] Inherited,
+               FontColor->GrayLevel[0.09999084492227013]]}
+            },
+            GridBoxSpacings->{"Columns" -> {{0.25}}}],
+           Alignment->Left,
+           BaseStyle->{LineSpacing -> {0, 0}, LineBreakWithin -> False},
+           BaselinePosition->Baseline,
+           FrameMargins->{{3, 0}, {0, 0}}], 
+          ItemBox[
+           PaneBox[
+            TogglerBox[Dynamic[Typeset`open], {True->
+             
+             DynamicBox[FEPrivate`FrontEndResource[
+              "FEBitmaps", "IconizeCloser"],
+              ImageSizeCache->{11., {1.15185546875, 9.84814453125}}], False->
+             
+             DynamicBox[FEPrivate`FrontEndResource[
+              "FEBitmaps", "IconizeOpener"],
+              ImageSizeCache->{11., {1.15185546875, 9.84814453125}}]},
+             Appearance->None,
+             BaselinePosition->Baseline,
+             ContentPadding->False,
+             FrameMargins->0],
+            Alignment->Left,
+            BaselinePosition->Baseline,
+            FrameMargins->{{1, 1}, {0, 0}}],
+           Frame->{{
+              Directive[
+               Opacity[0.5], 
+               RGBColor[
+               0.831298829690661, 0.847045900003161, 0.850952150003161]], 
+              False}, {False, False}}]}
+        },
+        BaselinePosition->{1, 1},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+        GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0}}}], True->
+       GridBox[{
+         {GridBox[{
+            {
+             PaneBox[GridBox[{
+                {
+                 StyleBox[
+                  AdjustmentBox[
+                   
+                   StyleBox["\<\"[\[FilledSmallSquare]]\"\>", 
+                    "ResourceFunctionIcon",
+                    
+                    FontColor->RGBColor[
+                    0.8745098039215686, 0.2784313725490196, 
+                    0.03137254901960784]],
+                   BoxBaselineShift->-0.25,
+                   BoxMargins->{{0, 0}, {-1, -1}}],
+                  ShowStringCharacters->False,
+                  FontFamily->"Source Sans Pro Black",
+                  FontSize->0.6538461538461539 Inherited,
+                  FontWeight->"Heavy",
+                  PrivateFontOptions->{"OperatorSubstitution"->False}], 
+                 StyleBox[
+                  RowBox[{
+                   StyleBox["SearchOrderedList", "ResourceFunctionLabel"], 
+                   " "}],
+                  ShowAutoStyles->False,
+                  ShowStringCharacters->False,
+                  FontSize->Rational[12, 13] Inherited,
+                  FontColor->GrayLevel[0.09999084492227013]]}
+               },
+               GridBoxSpacings->{"Columns" -> {{0.25}}}],
+              Alignment->Left,
+              BaseStyle->{LineSpacing -> {0, 0}, LineBreakWithin -> False},
+              BaselinePosition->Baseline,
+              FrameMargins->{{3, 0}, {0, 0}}], 
+             ItemBox[
+              PaneBox[
+               TogglerBox[Dynamic[Typeset`open], {True->
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "FEBitmaps", "IconizeCloser"]], False->
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "FEBitmaps", "IconizeOpener"]]},
+                Appearance->None,
+                BaselinePosition->Baseline,
+                ContentPadding->False,
+                FrameMargins->0],
+               Alignment->Left,
+               BaselinePosition->Baseline,
+               FrameMargins->{{1, 1}, {0, 0}}],
+              Frame->{{
+                 Directive[
+                  Opacity[0.5], 
+                  RGBColor[
+                  0.831298829690661, 0.847045900003161, 0.850952150003161]], 
+                 False}, {False, False}}]}
+           },
+           BaselinePosition->{1, 1},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+           GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0}}}]},
+         {
+          StyleBox[
+           PaneBox[GridBox[{
+              {
+               RowBox[{
+                TagBox["\<\"Version (latest): \"\>",
+                 "IconizedLabel"], " ", 
+                TagBox["\<\"1.0.0\"\>",
+                 "IconizedItem"]}]},
+              {
+               TagBox[
+                
+                TemplateBox[{
+                 "\"Documentation \[RightGuillemet]\"", 
+                  "https://resources.wolframcloud.com/FunctionRepository/\
+resources/7603914f-a0eb-4400-8e34-7e8d8fbb52c8/"},
+                 "HyperlinkURL"],
+                "IconizedItem"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            Alignment->Left,
+            BaselinePosition->Baseline,
+            FrameMargins->{{5, 4}, {0, 4}}], "DialogStyle",
+           FontFamily->"Roboto",
+           FontSize->11]}
+        },
+        BaselinePosition->{1, 1},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+        GridBoxDividers->{"Columns" -> {{None}}, "Rows" -> {False, {
+             GrayLevel[0.8]}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, Dynamic[
+       Typeset`open],
+       BaselinePosition->Baseline,
+       ImageSize->Automatic],
+      Background->RGBColor[
+       0.968505860940661, 0.976440431253161, 0.984252931253161],
+      BaselinePosition->Baseline,
+      DefaultBaseStyle->{
+       LightDarkAutoColorRules -> <|"MarkedColors" -> True|>},
+      FrameMargins->{{0, 0}, {1, 0}},
+      FrameStyle->RGBColor[
+       0.831298829690661, 0.847045900003161, 0.850952150003161],
+      RoundingRadius->4]],
+    #& ,
+    TagBoxNote->" "],
+   {"FunctionResourceBox", 
+    RGBColor[0.8745098039215686, 0.2784313725490196, 0.03137254901960784], 
+    "SearchOrderedList"},
+   TagBoxNote->"FunctionResourceBox"],
+  ResourceFunction[
+   ResourceObject[<|
+    "Name" -> "SearchOrderedList", "ShortName" -> "SearchOrderedList", "UUID" -> 
+     "7603914f-a0eb-4400-8e34-7e8d8fbb52c8", "ResourceType" -> "Function", 
+     "Version" -> "1.0.0", "Description" -> 
+     "Search an ordered list at speed logarithmic in the length of a list", 
+     "RepositoryLocation" -> 
+     URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+     "SymbolName" -> 
+     "FunctionRepository`$4692e67870f64acbac2e076c7b8a66ce`SearchOrderedList",
+      "FunctionLocation" -> 
+     CloudObject[
+      "https://www.wolframcloud.com/obj/ddb189d4-bb96-4baf-8f36-db6ee4d6692f"]\
+|>, ResourceSystemBase -> Automatic]],
+  Selectable->False]], "Output",
+ CellLabel->"Out[1]=",ExpressionUUID->"7cda2dc1-dcfa-c646-818a-555d72e19ef4"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SubdivideLogList", "[", 
+   RowBox[{"list_", ",", 
+    RowBox[{"m_", ":", "4096"}]}], "]"}], ":=", 
+  RowBox[{"list", "[", 
+   RowBox[{"[", 
+    RowBox[{"DeleteDuplicates", "[", 
+     RowBox[{"Round", "[", 
+      RowBox[{"10", "^", 
+       RowBox[{"Subdivide", "[", 
+        RowBox[{"0", ",", 
+         RowBox[{"Log10", "[", 
+          RowBox[{"Length", "[", "list", "]"}], "]"}], ",", 
+         RowBox[{"m", "-", "1"}]}], "]"}]}], "]"}], "]"}], "]"}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[2]:=",ExpressionUUID->"4c4ba2e8-55fb-ee47-9068-f90bf6bacffc"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"FilterStartTime", "[", 
+   RowBox[{"list_", ",", "time_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", "startIdx", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"startIdx", "=", 
+      RowBox[{"Max", "[", 
+       RowBox[{"1", ",", 
+        RowBox[{"Ceiling", "@", 
+         RowBox[{"SearchOrderedList", "[", 
+          RowBox[{"list", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ">=", "time"}], "&"}]}], 
+          "]"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"list", "[", 
+      RowBox[{"[", 
+       RowBox[{"startIdx", ";;", 
+        RowBox[{"-", "1"}]}], "]"}], "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FilterEndTime", "[", 
+   RowBox[{"list_", ",", "time_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", "endIdx", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"endIdx", "=", 
+      RowBox[{"Min", "[", 
+       RowBox[{
+        RowBox[{"Length", "[", "list", "]"}], ",", 
+        RowBox[{"Floor", "@", 
+         RowBox[{"SearchOrderedList", "[", 
+          RowBox[{"list", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "<=", "time"}], "&"}]}], 
+          "]"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"list", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ";;", "endIdx"}], "]"}], "]"}]}]}], "\[IndentingNewLine]",
+    "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FilterTime", "[", 
+   RowBox[{"list_", ",", "timeStart_", ",", "timeEnd_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"startIdx", ",", "endIdx"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"startIdx", "=", 
+      RowBox[{"Max", "[", 
+       RowBox[{"1", ",", 
+        RowBox[{"Ceiling", "@", 
+         RowBox[{"SearchOrderedList", "[", 
+          RowBox[{"list", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ">=", "timeStart"}], "&"}]}], 
+          "]"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"endIdx", "=", 
+      RowBox[{"Min", "[", 
+       RowBox[{
+        RowBox[{"Length", "[", "list", "]"}], ",", 
+        RowBox[{"Floor", "@", 
+         RowBox[{"SearchOrderedList", "[", 
+          RowBox[{"list", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ">", "timeEnd"}], "&"}]}], 
+          "]"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"list", "[", 
+      RowBox[{"[", 
+       RowBox[{"startIdx", ";;", "endIdx"}], "]"}], "]"}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]}], "Input",
+ CellLabel->"In[3]:=",ExpressionUUID->"707c2347-7324-6349-9b1b-9484e8048b18"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Data Loading", "Section",ExpressionUUID->"d0a76b65-3717-3b43-8aef-00ea9800c44f"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"rate", "=", 
+    RowBox[{"998.4", "*", 
+     RowBox[{"10", "^", "3"}]}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"Data", " ", "capture", " ", "rate"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"senseResistance", "=", "12.87"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"files", "=", 
+   RowBox[{"FileNames", "[", 
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<*.bin\>\""}], "}"}],
+      "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"raw", "=", 
+   RowBox[{"ParallelTable", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"First", "[", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{"ff", ",", 
+          RowBox[{
+           RowBox[{"\"\<ULNLDD\>\"", "~~", 
+            RowBox[{"lddtype", ":", 
+             RowBox[{"(", 
+              
+              RowBox[{"\"\<Mini-\>\"", "|", "\"\<MiniSwitch-\>\"", 
+               "|", "\"\<JFET-\>\"", "|", "\"\<-\>\""}], ")"}]}], "~~", 
+            RowBox[{"output", ":", 
+             RowBox[{"Repeated", "[", "WordCharacter", "]"}]}], 
+            "~~", "\"\<-TurnOnOff_\>\""}], ":>", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lddtype", "/.", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"\"\<-\>\"", "->", "\"\<Normal\>\""}], ",", 
+                RowBox[{"\"\<Mini-\>\"", "->", "\"\<Mini\>\""}]}], "}"}]}], ",",
+              "output"}], "}"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Transpose", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"N", "[", 
+              RowBox[{"1", "/", "rate"}], "]"}], "*", 
+             RowBox[{"Range", "[", 
+              RowBox[{"Length", "[", "#", "]"}], "]"}]}], ",", 
+            RowBox[{"#", "/", "senseResistance"}]}], "}"}], "]"}], "&"}], "@", 
+        RowBox[{"BinaryReadList", "[", 
+         RowBox[{"ff", ",", "\"\<Real32\>\""}], "]"}]}]}], 
+      "\[IndentingNewLine]", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"ff", ",", "files"}], "}"}]}], "]"}]}], ";"}]}], "Input",
+ CellLabel->"In[6]:=",ExpressionUUID->"2b387039-34b3-7241-a3c8-1b41cc475063"],
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "[", 
+      RowBox[{"[", 
+       RowBox[{
+        RowBox[{"-", "1"}], ",", 
+        RowBox[{"1", ";;", 
+         RowBox[{"-", "1"}], ";;", "10000"}]}], "]"}], "]"}], "&"}], "/@", 
+    "raw"}], ",", 
+   RowBox[{"PlotHighlighting", "->", "None"}]}], "]"}]], "Input",
+ CellLabel->"In[10]:=",ExpressionUUID->"9c0d458c-80df-ea4e-b5e0-f25da05c77ad"],
+
+Cell[CellGroupData[{
+
+Cell["Determine Starting & Endpoints", "Subsection",ExpressionUUID->"391cba18-ed55-8148-8268-bdb26ae3a24b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"roughStartIndizes", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Round", "[", 
+     RowBox[{"SearchOrderedList", "[", 
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{"-", "1"}], "]"}], "]"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], ">", "0.005"}], "&"}]}], "]"}], 
+     "]"}], "&"}], "/@", "raw"}]}], "\[IndentingNewLine]", 
+ RowBox[{"roughEndIndizes", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Length", "[", 
+      RowBox[{"#", "[", 
+       RowBox[{"[", 
+        RowBox[{"-", "1"}], "]"}], "]"}], "]"}], "-", 
+     RowBox[{"Round", "[", 
+      RowBox[{"SearchOrderedList", "[", 
+       RowBox[{
+        RowBox[{"Reverse", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", 
+           RowBox[{"-", "1"}], "]"}], "]"}], "]"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], ">", "0.09"}], "&"}]}], "]"}], 
+      "]"}]}], "&"}], "/@", "raw"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{"Transpose", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"raw", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", "roughStartIndizes", ",",
+       "roughEndIndizes", ",", 
+      RowBox[{"raw", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", 
+         RowBox[{"-", "1"}]}], "]"}], "]"}]}], "}"}], "]"}]}], 
+  ";"}]}], "Input",
+ CellLabel->"In[11]:=",ExpressionUUID->"ab62543e-855f-0c48-b81f-604046ef72fc"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "4972322", ",", "4948719", ",", "4877127", ",", "4974866", ",", "4970793", ",",
+    "4986839", ",", "4712496", ",", "5034150", ",", "5543211", ",", "5745500",
+    ",", "5478526", ",", "5469615", ",", "4907586", ",", "4776494", ",", 
+   "4799832", ",", "4934759"}], "}"}]], "Output",
+ CellLabel->"Out[11]=",ExpressionUUID->"c871feb4-2a63-0945-ae81-e4f2e6987a77"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "15016465", ",", "15079112", ",", "14900907", ",", "14914594", ",", 
+   "15054057", ",", "14986023", ",", "15033082", ",", "14982343", ",", 
+   "15094516", ",", "15057030", ",", "15103211", ",", "15078542", ",", 
+   "14977027", ",", "14792816", ",", "14854118", ",", "14932450"}], 
+  "}"}]], "Output",
+ CellLabel->"Out[12]=",ExpressionUUID->"7c0bd8c5-1c3e-a448-8777-9394f4ec7d30"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Startpoint", "Subsubsection",ExpressionUUID->"e8f7d702-27cb-e544-adc7-bf11d182c245"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"startPointSpan", "=", "50000"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"startDataLength", "=", 
+   RowBox[{"Round", "[", 
+    RowBox[{"5", "*", "rate"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "[", 
+      RowBox[{"[", 
+       RowBox[{
+        RowBox[{"-", "1"}], ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "-", "startPointSpan"}], ")"}], ";;", 
+         RowBox[{"(", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], ")"}], ";;", "10"}]}], "]"}], 
+      "]"}], "&"}], "/@", "data"}], ",", 
+   RowBox[{"PlotRange", "->", "All"}], ",", 
+   RowBox[{"PlotStyle", "->", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"ColorData", "[", 
+        RowBox[{"97", ",", "#"}], "]"}], "&"}], "/@", 
+      RowBox[{"Range", "[", 
+       RowBox[{"Length", "[", "dataStart", "]"}], "]"}]}], ")"}]}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dataStart", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], ",", 
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "-", "startPointSpan"}], ")"}], 
+           ";;", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "-", "startPointSpan", "+", 
+             "startDataLength"}], ")"}]}]}], "]"}], "]"}]}], "}"}], "&"}], "/@",
+     "data"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dataStart", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"#1", ",", 
+       RowBox[{"Transpose", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"#2", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", "1"}], "]"}], "]"}], "-", 
+           RowBox[{"#2", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ",", 
+          RowBox[{"#2", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "2"}], "]"}], "]"}]}], "}"}], "]"}]}], "}"}], 
+     "&"}], "@@@", "dataStart"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ListLogLinearPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"SubdivideLogList", "[", 
+      RowBox[{
+       RowBox[{"FilterTime", "[", 
+        RowBox[{"#", ",", "0.01", ",", "5.0"}], "]"}], ",", "2048"}], "]"}], 
+     "&"}], "/@", 
+    RowBox[{"dataStart", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", 
+       RowBox[{"-", "1"}]}], "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"PlotRange", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0.01", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "0.01"}], ",", "0.13"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"Joined", "->", "True"}], ",", 
+   RowBox[{"GridLines", "->", "Full"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"PlotStyle", "->", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"ColorData", "[", 
+        RowBox[{"97", ",", "#"}], "]"}], "&"}], "/@", 
+      RowBox[{"Range", "[", 
+       RowBox[{"Length", "[", "dataStart", "]"}], "]"}]}], ")"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"FrameLabel", "->", 
+    RowBox[{"Thread", "[", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<time since power on t / s\>\"", 
+         ",", "\"\<output current I / A\>\""}], "}"}], ",", "14"}], "]"}], 
+     "]"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"PlotLegends", "->", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], "&"}], "@@@", 
+      RowBox[{"dataStart", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}]}], "]"}]}], "Input",
+ CellLabel->"In[14]:=",ExpressionUUID->"fbf841cd-4b4c-af49-a714-7a3136ab7553"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Endpoint", "Subsubsection",ExpressionUUID->"a067510c-2187-8747-8fa4-a1ba7bd6c2eb"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"endPointSpan", "=", "50000"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"endDataLength", "=", 
+   RowBox[{"Round", "[", 
+    RowBox[{"5", "*", "rate"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "[", 
+      RowBox[{"[", 
+       RowBox[{
+        RowBox[{"-", "1"}], ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "-", "endPointSpan"}], ")"}], ";;", 
+         RowBox[{"(", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "3", "]"}], "]"}], ")"}], ";;", "10"}]}], "]"}], 
+      "]"}], "&"}], "/@", "data"}], ",", 
+   RowBox[{"PlotRange", "->", "All"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dataEnd", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], ",", 
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "3", "]"}], "]"}], "-", "endPointSpan"}], ")"}], ";;", 
+           RowBox[{"(", 
+            RowBox[{"Min", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", "3", "]"}], "]"}], "-", "endPointSpan", "+", 
+               "endDataLength"}], ",", 
+              RowBox[{"Length", "[", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", 
+                 RowBox[{"-", "1"}], "]"}], "]"}], "]"}]}], "]"}], ")"}]}]}], 
+         "]"}], "]"}]}], "}"}], "&"}], "/@", "data"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dataEnd", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"#1", ",", 
+       RowBox[{"Transpose", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"#2", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", "1"}], "]"}], "]"}], "-", 
+           RowBox[{"#2", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ",", 
+          RowBox[{"#2", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "2"}], "]"}], "]"}]}], "}"}], "]"}]}], "}"}], 
+     "&"}], "@@@", "dataEnd"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ListLogLinearPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"SubdivideLogList", "[", 
+      RowBox[{
+       RowBox[{"FilterTime", "[", 
+        RowBox[{"#", ",", "0.02", ",", "1.0"}], "]"}], ",", "2048"}], "]"}], 
+     "&"}], "/@", 
+    RowBox[{"dataEnd", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", 
+       RowBox[{"-", "1"}]}], "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"PlotRange", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0.02", ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "0.01"}], ",", "0.11"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"Joined", "->", "True"}], ",", 
+   RowBox[{"GridLines", "->", "Full"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"PlotStyle", "->", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"ColorData", "[", 
+        RowBox[{"97", ",", "#"}], "]"}], "&"}], "/@", 
+      RowBox[{"Range", "[", 
+       RowBox[{"Length", "[", "dataEnd", "]"}], "]"}]}], ")"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"FrameLabel", "->", 
+    RowBox[{"Thread", "[", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<time since power off t / s\>\"", 
+         ",", "\"\<output current I / A\>\""}], "}"}], ",", "14"}], "]"}], 
+     "]"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"PlotLegends", "->", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], "&"}], "@@@", 
+      RowBox[{"dataEnd", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ListLogLinearPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"SubdivideLogList", "[", 
+      RowBox[{
+       RowBox[{"FilterTime", "[", 
+        RowBox[{"#", ",", "0.05", ",", "0.0502"}], "]"}], ",", "2048"}], 
+      "]"}], "&"}], "/@", 
+    RowBox[{"dataEnd", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", 
+       RowBox[{"-", "1"}]}], "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"PlotRange", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0.05", ",", "0.0502"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "0.01"}], ",", "0.11"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"Joined", "->", "True"}], ",", 
+   RowBox[{"GridLines", "->", "Full"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"PlotStyle", "->", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"ColorData", "[", 
+        RowBox[{"97", ",", "#"}], "]"}], "&"}], "/@", 
+      RowBox[{"Range", "[", 
+       RowBox[{"Length", "[", "dataEnd", "]"}], "]"}]}], ")"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"FrameLabel", "->", 
+    RowBox[{"Thread", "[", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<time since power off t / s\>\"", 
+         ",", "\"\<output current I / A\>\""}], "}"}], ",", "14"}], "]"}], 
+     "]"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"PlotLegends", "->", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], "&"}], "@@@", 
+      RowBox[{"dataEnd", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}]}], "]"}]}], "Input",
+ CellLabel->"In[20]:=",ExpressionUUID->"ae2935a1-1df8-0140-86bc-dd25e54967c0"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Result Graphs by Driver and Type", "Section",ExpressionUUID->"a6d9f6f2-901f-c44e-831e-d658cc27ea29"],
+
+Cell[CellGroupData[{
+
+Cell["Mini Driver + Switch Actuation", "Subsubsection",ExpressionUUID->"a06bee49-6160-974a-b995-9d2d23bccc65"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dataStartMiniDriverSwitch", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"dataStart", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "1"}], "]"}], "]"}], "==", "\"\<MiniSwitch-\>\""}],
+       "&"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dataEndMiniDriverSwitch", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"dataEnd", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "1"}], "]"}], "]"}], "==", "\"\<MiniSwitch-\>\""}],
+       "&"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"g", "=", 
+  RowBox[{"Grid", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Thread", "[", 
+       RowBox[{"Style", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          
+          RowBox[{"\"\<Turn-on\>\"", ",", "\"\<Turn-off\>\"", 
+           ",", "\"\<Turn-off zoomed in\>\""}], "}"}], ",", "22"}], "]"}], 
+       "]"}], ",", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"ListLogLinearPlot", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"SubdivideLogList", "[", 
+             RowBox[{
+              RowBox[{"FilterTime", "[", 
+               RowBox[{"#", ",", "0.01", ",", "5.0"}], "]"}], ",", "2048"}], 
+             "]"}], "&"}], "/@", 
+           RowBox[{"dataStartMiniDriverSwitch", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", 
+              RowBox[{"-", "1"}]}], "]"}], "]"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"PlotRange", "->", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0.01", ",", "5"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "0.01"}], ",", "0.13"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"Joined", "->", "True"}], ",", 
+          RowBox[{"GridLines", "->", "Full"}], ",", 
+          RowBox[{"ImageSize", "->", "Medium"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotStyle", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"ColorData", "[", 
+               RowBox[{"97", ",", "#"}], "]"}], "&"}], "/@", 
+             RowBox[{"Range", "[", 
+              RowBox[{"Length", "[", "dataStartMiniDriverSwitch", "]"}], 
+              "]"}]}], ")"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"FrameLabel", "->", 
+           RowBox[{"Thread", "[", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               
+               RowBox[{"\"\<time since power on t / s\>\"", 
+                ",", "\"\<output current I / A\>\""}], "}"}], ",", "14"}], 
+             "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotLegends", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], "&"}], "@@@", 
+             RowBox[{"dataStartMiniDriverSwitch", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}]}], "]"}], ",",
+         "\[IndentingNewLine]", 
+        RowBox[{"ListLogLinearPlot", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"SubdivideLogList", "[", 
+             RowBox[{
+              RowBox[{"FilterTime", "[", 
+               RowBox[{"#", ",", "0.01", ",", "5.0"}], "]"}], ",", "2048"}], 
+             "]"}], "&"}], "/@", 
+           RowBox[{"dataEndMiniDriverSwitch", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", 
+              RowBox[{"-", "1"}]}], "]"}], "]"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"PlotRange", "->", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0.01", ",", "5"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "0.01"}], ",", "0.13"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"Joined", "->", "True"}], ",", 
+          RowBox[{"GridLines", "->", "Full"}], ",", 
+          RowBox[{"ImageSize", "->", "Medium"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotStyle", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"ColorData", "[", 
+               RowBox[{"97", ",", "#"}], "]"}], "&"}], "/@", 
+             RowBox[{"Range", "[", 
+              RowBox[{"Length", "[", "dataEndMiniDriverSwitch", "]"}], 
+              "]"}]}], ")"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"FrameLabel", "->", 
+           RowBox[{"Thread", "[", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               
+               RowBox[{"\"\<time since power on t / s\>\"", 
+                ",", "\"\<output current I / A\>\""}], "}"}], ",", "14"}], 
+             "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotLegends", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], "&"}], "@@@", 
+             RowBox[{"dataEndMiniDriverSwitch", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}]}], "]"}], ",",
+         "\[IndentingNewLine]", 
+        RowBox[{"ListLogLinearPlot", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"SubdivideLogList", "[", 
+             RowBox[{
+              RowBox[{"FilterTime", "[", 
+               RowBox[{"#", ",", "0.05", ",", "0.0502"}], "]"}], ",", 
+              "2048"}], "]"}], "&"}], "/@", 
+           RowBox[{"dataEndMiniDriverSwitch", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", 
+              RowBox[{"-", "1"}]}], "]"}], "]"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"PlotRange", "->", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0.05", ",", "0.0502"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "0.01"}], ",", "0.13"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"Joined", "->", "True"}], ",", 
+          RowBox[{"GridLines", "->", "Full"}], ",", 
+          RowBox[{"ImageSize", "->", "Medium"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotStyle", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"ColorData", "[", 
+               RowBox[{"97", ",", "#"}], "]"}], "&"}], "/@", 
+             RowBox[{"Range", "[", 
+              RowBox[{"Length", "[", "dataEndMiniDriverSwitch", "]"}], 
+              "]"}]}], ")"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"FrameLabel", "->", 
+           RowBox[{"Thread", "[", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               
+               RowBox[{"\"\<time since power on t / s\>\"", 
+                ",", "\"\<output current I / A\>\""}], "}"}], ",", "14"}], 
+             "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotLegends", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], "&"}], "@@@", 
+             RowBox[{"dataEndMiniDriverSwitch", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}]}], "]"}]}], 
+       "\[IndentingNewLine]", "}"}]}], "}"}], ",", 
+    RowBox[{"Frame", "->", "All"}]}], "]"}]}]}], "Input",
+ CellLabel->"In[46]:=",ExpressionUUID->"25445a42-b8fd-7f45-a642-fbf330556729"],
+
+Cell[BoxData[{
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], 
+      ",", "\"\<Results_TurnOnOffCurves_MiniDriver_Switch.pdf\>\""}], "}"}], 
+    "]"}], ",", "g"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], 
+      ",", "\"\<Results_TurnOnOffCurves_MiniDriver_Switch.png\>\""}], "}"}], 
+    "]"}], ",", 
+   RowBox[{"Rasterize", "[", 
+    RowBox[{"g", ",", 
+     RowBox[{"RasterSize", "->", "2048"}]}], "]"}]}], "]"}]}], "Input",
+ CellLabel->"In[49]:=",ExpressionUUID->"f2373c8a-4ea7-dc40-8a1b-6935a50f001b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Mini Driver", "Subsubsection",ExpressionUUID->"df1966f7-3069-d648-ad38-24c1737ec4d6"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dataStartMiniDriverSwitch", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"dataStart", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "1"}], "]"}], "]"}], "==", "\"\<Mini\>\""}], 
+      "&"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dataEndMiniDriverSwitch", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"dataEnd", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "1"}], "]"}], "]"}], "==", "\"\<Mini\>\""}], 
+      "&"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"g", "=", 
+  RowBox[{"Grid", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Thread", "[", 
+       RowBox[{"Style", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"\"\<Turn-on\>\"", ",", "\"\<Turn-off\>\""}], "}"}], ",", 
+         "22"}], "]"}], "]"}], ",", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"ListLogLinearPlot", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"SubdivideLogList", "[", 
+             RowBox[{
+              RowBox[{"FilterTime", "[", 
+               RowBox[{"#", ",", "0.01", ",", "5.0"}], "]"}], ",", "2048"}], 
+             "]"}], "&"}], "/@", 
+           RowBox[{"dataStartMiniDriverSwitch", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", 
+              RowBox[{"-", "1"}]}], "]"}], "]"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"PlotRange", "->", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0.01", ",", "5"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "0.01"}], ",", "0.13"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"Joined", "->", "True"}], ",", 
+          RowBox[{"GridLines", "->", "Full"}], ",", 
+          RowBox[{"ImageSize", "->", "Medium"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotStyle", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"ColorData", "[", 
+               RowBox[{"97", ",", "#"}], "]"}], "&"}], "/@", 
+             RowBox[{"Range", "[", 
+              RowBox[{"Length", "[", "dataStartMiniDriverSwitch", "]"}], 
+              "]"}]}], ")"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"FrameLabel", "->", 
+           RowBox[{"Thread", "[", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               
+               RowBox[{"\"\<time since power on t / s\>\"", 
+                ",", "\"\<output current I / A\>\""}], "}"}], ",", "14"}], 
+             "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotLegends", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], "&"}], "@@@", 
+             RowBox[{"dataStartMiniDriverSwitch", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}]}], "]"}], ",",
+         "\[IndentingNewLine]", 
+        RowBox[{"ListLogLinearPlot", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"SubdivideLogList", "[", 
+             RowBox[{
+              RowBox[{"FilterTime", "[", 
+               RowBox[{"#", ",", "0.01", ",", "5.0"}], "]"}], ",", "2048"}], 
+             "]"}], "&"}], "/@", 
+           RowBox[{"dataEndMiniDriverSwitch", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", 
+              RowBox[{"-", "1"}]}], "]"}], "]"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"PlotRange", "->", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0.01", ",", "5"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "0.01"}], ",", "0.13"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"Joined", "->", "True"}], ",", 
+          RowBox[{"GridLines", "->", "Full"}], ",", 
+          RowBox[{"ImageSize", "->", "Medium"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotStyle", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"ColorData", "[", 
+               RowBox[{"97", ",", "#"}], "]"}], "&"}], "/@", 
+             RowBox[{"Range", "[", 
+              RowBox[{"Length", "[", "dataEndMiniDriverSwitch", "]"}], 
+              "]"}]}], ")"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"FrameLabel", "->", 
+           RowBox[{"Thread", "[", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               
+               RowBox[{"\"\<time since power on t / s\>\"", 
+                ",", "\"\<output current I / A\>\""}], "}"}], ",", "14"}], 
+             "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotLegends", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], "&"}], "@@@", 
+             RowBox[{"dataEndMiniDriverSwitch", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}]}], "]"}]}], 
+       "\[IndentingNewLine]", "}"}]}], "}"}], ",", 
+    RowBox[{"Frame", "->", "All"}]}], "]"}]}]}], "Input",
+ CellLabel->"In[52]:=",ExpressionUUID->"99d3dacc-3d2c-4041-9574-97042c81dfd1"],
+
+Cell[BoxData[{
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], 
+      ",", "\"\<Results_TurnOnOffCurves_MiniDriver.pdf\>\""}], "}"}], "]"}], ",",
+    "g"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], 
+      ",", "\"\<Results_TurnOnOffCurves_MiniDriver.png\>\""}], "}"}], "]"}], ",", 
+   RowBox[{"Rasterize", "[", 
+    RowBox[{"g", ",", 
+     RowBox[{"RasterSize", "->", "2048"}]}], "]"}]}], "]"}]}], "Input",
+ CellLabel->"In[55]:=",ExpressionUUID->"2e5dbb5a-6a4e-634c-8177-28834676b454"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Normal Driver", "Subsubsection",ExpressionUUID->"c223cc79-c101-7c4e-a44c-cb73718d1a3c"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dataStartMiniDriverSwitch", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"dataStart", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "1"}], "]"}], "]"}], "==", "\"\<Normal\>\""}], 
+      "&"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dataEndMiniDriverSwitch", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"dataEnd", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "1"}], "]"}], "]"}], "==", "\"\<Normal\>\""}], 
+      "&"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"g", "=", 
+  RowBox[{"Grid", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Thread", "[", 
+       RowBox[{"Style", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"\"\<Turn-on\>\"", ",", "\"\<Turn-off\>\""}], "}"}], ",", 
+         "22"}], "]"}], "]"}], ",", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"ListLogLinearPlot", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"SubdivideLogList", "[", 
+             RowBox[{
+              RowBox[{"FilterTime", "[", 
+               RowBox[{"#", ",", "0.01", ",", "5.0"}], "]"}], ",", "2048"}], 
+             "]"}], "&"}], "/@", 
+           RowBox[{"dataStartMiniDriverSwitch", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", 
+              RowBox[{"-", "1"}]}], "]"}], "]"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"PlotRange", "->", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0.01", ",", "5"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "0.01"}], ",", "0.13"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"Joined", "->", "True"}], ",", 
+          RowBox[{"GridLines", "->", "Full"}], ",", 
+          RowBox[{"ImageSize", "->", "Medium"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotStyle", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"ColorData", "[", 
+               RowBox[{"97", ",", "#"}], "]"}], "&"}], "/@", 
+             RowBox[{"Range", "[", 
+              RowBox[{"Length", "[", "dataStartMiniDriverSwitch", "]"}], 
+              "]"}]}], ")"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"FrameLabel", "->", 
+           RowBox[{"Thread", "[", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               
+               RowBox[{"\"\<time since power on t / s\>\"", 
+                ",", "\"\<output current I / A\>\""}], "}"}], ",", "14"}], 
+             "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotLegends", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], "&"}], "@@@", 
+             RowBox[{"dataStartMiniDriverSwitch", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}]}], "]"}], ",",
+         "\[IndentingNewLine]", 
+        RowBox[{"ListLogLinearPlot", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"SubdivideLogList", "[", 
+             RowBox[{
+              RowBox[{"FilterTime", "[", 
+               RowBox[{"#", ",", "0.01", ",", "5.0"}], "]"}], ",", "2048"}], 
+             "]"}], "&"}], "/@", 
+           RowBox[{"dataEndMiniDriverSwitch", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", 
+              RowBox[{"-", "1"}]}], "]"}], "]"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"PlotRange", "->", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0.01", ",", "5"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "0.01"}], ",", "0.13"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"Joined", "->", "True"}], ",", 
+          RowBox[{"GridLines", "->", "Full"}], ",", 
+          RowBox[{"ImageSize", "->", "Medium"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotStyle", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"ColorData", "[", 
+               RowBox[{"97", ",", "#"}], "]"}], "&"}], "/@", 
+             RowBox[{"Range", "[", 
+              RowBox[{"Length", "[", "dataEndMiniDriverSwitch", "]"}], 
+              "]"}]}], ")"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"FrameLabel", "->", 
+           RowBox[{"Thread", "[", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               
+               RowBox[{"\"\<time since power on t / s\>\"", 
+                ",", "\"\<output current I / A\>\""}], "}"}], ",", "14"}], 
+             "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotLegends", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], "&"}], "@@@", 
+             RowBox[{"dataEndMiniDriverSwitch", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}]}], "]"}]}], 
+       "\[IndentingNewLine]", "}"}]}], "}"}], ",", 
+    RowBox[{"Frame", "->", "All"}]}], "]"}]}]}], "Input",
+ CellLabel->"In[58]:=",ExpressionUUID->"899d9c67-ce2b-fa4e-85ab-7b261ebbb10b"],
+
+Cell[BoxData[{
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], 
+      ",", "\"\<Results_TurnOnOffCurves_NormalDriver.pdf\>\""}], "}"}], "]"}],
+    ",", "g"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], 
+      ",", "\"\<Results_TurnOnOffCurves_NormalDriver.png\>\""}], "}"}], "]"}],
+    ",", 
+   RowBox[{"Rasterize", "[", 
+    RowBox[{"g", ",", 
+     RowBox[{"RasterSize", "->", "2048"}]}], "]"}]}], "]"}]}], "Input",
+ CellLabel->"In[61]:=",ExpressionUUID->"c378beb7-bfb5-a94a-95ac-6cab28482c97"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Normal Driver with JFET Modulation Enabled", "Subsubsection",ExpressionUUID->"c89670a6-2d3d-8b41-8728-673c901485f8"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dataStartMiniDriverSwitch", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"dataStart", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "1"}], "]"}], "]"}], "==", "\"\<JFET-\>\""}], 
+      "&"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dataEndMiniDriverSwitch", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"dataEnd", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "1"}], "]"}], "]"}], "==", "\"\<JFET-\>\""}], 
+      "&"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"g", "=", 
+  RowBox[{"Grid", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Thread", "[", 
+       RowBox[{"Style", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"\"\<Turn-on\>\"", ",", "\"\<Turn-off\>\""}], "}"}], ",", 
+         "22"}], "]"}], "]"}], ",", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"ListLogLinearPlot", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"SubdivideLogList", "[", 
+             RowBox[{
+              RowBox[{"FilterTime", "[", 
+               RowBox[{"#", ",", "0.01", ",", "5.0"}], "]"}], ",", "2048"}], 
+             "]"}], "&"}], "/@", 
+           RowBox[{"dataStartMiniDriverSwitch", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", 
+              RowBox[{"-", "1"}]}], "]"}], "]"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"PlotRange", "->", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0.01", ",", "5"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "0.01"}], ",", "0.13"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"Joined", "->", "True"}], ",", 
+          RowBox[{"GridLines", "->", "Full"}], ",", 
+          RowBox[{"ImageSize", "->", "Medium"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotStyle", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"ColorData", "[", 
+               RowBox[{"97", ",", "#"}], "]"}], "&"}], "/@", 
+             RowBox[{"Range", "[", 
+              RowBox[{"Length", "[", "dataStartMiniDriverSwitch", "]"}], 
+              "]"}]}], ")"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"FrameLabel", "->", 
+           RowBox[{"Thread", "[", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               
+               RowBox[{"\"\<time since power on t / s\>\"", 
+                ",", "\"\<output current I / A\>\""}], "}"}], ",", "14"}], 
+             "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotLegends", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], "&"}], "@@@", 
+             RowBox[{"dataStartMiniDriverSwitch", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}]}], "]"}], ",",
+         "\[IndentingNewLine]", 
+        RowBox[{"ListLogLinearPlot", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"SubdivideLogList", "[", 
+             RowBox[{
+              RowBox[{"FilterTime", "[", 
+               RowBox[{"#", ",", "0.01", ",", "5.0"}], "]"}], ",", "2048"}], 
+             "]"}], "&"}], "/@", 
+           RowBox[{"dataEndMiniDriverSwitch", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", 
+              RowBox[{"-", "1"}]}], "]"}], "]"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"PlotRange", "->", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0.01", ",", "5"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "0.01"}], ",", "0.13"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"Joined", "->", "True"}], ",", 
+          RowBox[{"GridLines", "->", "Full"}], ",", 
+          RowBox[{"ImageSize", "->", "Medium"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotStyle", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"ColorData", "[", 
+               RowBox[{"97", ",", "#"}], "]"}], "&"}], "/@", 
+             RowBox[{"Range", "[", 
+              RowBox[{"Length", "[", "dataEndMiniDriverSwitch", "]"}], 
+              "]"}]}], ")"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"FrameLabel", "->", 
+           RowBox[{"Thread", "[", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               
+               RowBox[{"\"\<time since power on t / s\>\"", 
+                ",", "\"\<output current I / A\>\""}], "}"}], ",", "14"}], 
+             "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"PlotLegends", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"#1", "<>", "\"\< \>\"", "<>", "#2"}], "&"}], "@@@", 
+             RowBox[{"dataEndMiniDriverSwitch", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}]}], "]"}]}], 
+       "\[IndentingNewLine]", "}"}]}], "}"}], ",", 
+    RowBox[{"Frame", "->", "All"}]}], "]"}]}]}], "Input",
+ CellLabel->"In[63]:=",ExpressionUUID->"960c8661-40b1-6f4a-b250-e2cebda2d1a7"],
+
+Cell[BoxData[{
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], 
+      ",", "\"\<Results_TurnOnOffCurves_NormalDriver_JFETModEnabled.pdf\>\""}]\
+, "}"}], "]"}], ",", "g"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], 
+      ",", "\"\<Results_TurnOnOffCurves_NormalDriver_JFETModEnabled.png\>\""}]\
+, "}"}], "]"}], ",", 
+   RowBox[{"Rasterize", "[", 
+    RowBox[{"g", ",", 
+     RowBox[{"RasterSize", "->", "2048"}]}], "]"}]}], "]"}]}], "Input",
+ CellLabel->"In[66]:=",ExpressionUUID->"3614a5d8-d8fc-cc47-8730-e84d343ff0bf"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1909, 1001},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (May 19, 2026)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f3433df3-9e98-7b4a-906f-1ca62fb00654"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 88, 0, 66, "Section",ExpressionUUID->"3f846886-2856-3f45-af33-ed81be9f8511"],
+Cell[CellGroupData[{
+Cell[689, 26, 213, 4, 28, "Input",ExpressionUUID->"92c2331f-8a7b-3643-b227-9ca3b0b34d2c"],
+Cell[905, 32, 8045, 198, 35, "Output",ExpressionUUID->"7cda2dc1-dcfa-c646-818a-555d72e19ef4"]
+}, Open  ]],
+Cell[8965, 233, 588, 16, 28, "Input",ExpressionUUID->"4c4ba2e8-55fb-ee47-9068-f90bf6bacffc"],
+Cell[9556, 251, 3018, 82, 313, "Input",ExpressionUUID->"707c2347-7324-6349-9b1b-9484e8048b18"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12611, 338, 86, 0, 66, "Section",ExpressionUUID->"d0a76b65-3717-3b43-8aef-00ea9800c44f"],
+Cell[12700, 340, 2373, 63, 161, "Input",ExpressionUUID->"2b387039-34b3-7241-a3c8-1b41cc475063"],
+Cell[15076, 405, 442, 13, 28, "Input",ExpressionUUID->"9c0d458c-80df-ea4e-b5e0-f25da05c77ad"],
+Cell[CellGroupData[{
+Cell[15543, 422, 107, 0, 53, "Subsection",ExpressionUUID->"391cba18-ed55-8148-8268-bdb26ae3a24b"],
+Cell[CellGroupData[{
+Cell[15675, 426, 1574, 49, 66, "Input",ExpressionUUID->"ab62543e-855f-0c48-b81f-604046ef72fc"],
+Cell[17252, 477, 403, 7, 32, "Output",ExpressionUUID->"c871feb4-2a63-0945-ae81-e4f2e6987a77"],
+Cell[17658, 486, 422, 8, 32, "Output",ExpressionUUID->"7c0bd8c5-1c3e-a448-8777-9394f4ec7d30"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18117, 499, 90, 0, 43, "Subsubsection",ExpressionUUID->"e8f7d702-27cb-e544-adc7-bf11d182c245"],
+Cell[18210, 501, 4184, 125, 199, "Input",ExpressionUUID->"fbf841cd-4b4c-af49-a714-7a3136ab7553"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22431, 631, 88, 0, 43, "Subsubsection",ExpressionUUID->"a067510c-2187-8747-8fa4-a1ba7bd6c2eb"],
+Cell[22522, 633, 5774, 170, 294, "Input",ExpressionUUID->"ae2935a1-1df8-0140-86bc-dd25e54967c0"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28357, 810, 106, 0, 66, "Section",ExpressionUUID->"a6d9f6f2-901f-c44e-831e-d658cc27ea29"],
+Cell[CellGroupData[{
+Cell[28488, 814, 110, 0, 43, "Subsubsection",ExpressionUUID->"a06bee49-6160-974a-b995-9d2d23bccc65"],
+Cell[28601, 816, 7630, 193, 370, "Input",ExpressionUUID->"25445a42-b8fd-7f45-a642-fbf330556729"],
+Cell[36234, 1011, 743, 20, 47, "Input",ExpressionUUID->"f2373c8a-4ea7-dc40-8a1b-6935a50f001b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37014, 1036, 91, 0, 43, "Subsubsection",ExpressionUUID->"df1966f7-3069-d648-ad38-24c1737ec4d6"],
+Cell[37108, 1038, 5423, 139, 275, "Input",ExpressionUUID->"99d3dacc-3d2c-4041-9574-97042c81dfd1"],
+Cell[42534, 1179, 723, 19, 47, "Input",ExpressionUUID->"2e5dbb5a-6a4e-634c-8177-28834676b454"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43294, 1203, 93, 0, 43, "Subsubsection",ExpressionUUID->"c223cc79-c101-7c4e-a44c-cb73718d1a3c"],
+Cell[43390, 1205, 5427, 139, 275, "Input",ExpressionUUID->"899d9c67-ce2b-fa4e-85ab-7b261ebbb10b"],
+Cell[48820, 1346, 731, 20, 47, "Input",ExpressionUUID->"c378beb7-bfb5-a94a-95ac-6cab28482c97"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49588, 1371, 122, 0, 43, "Subsubsection",ExpressionUUID->"c89670a6-2d3d-8b41-8728-673c901485f8"],
+Cell[49713, 1373, 5425, 139, 275, "Input",ExpressionUUID->"960c8661-40b1-6f4a-b250-e2cebda2d1a7"],
+Cell[55141, 1514, 757, 20, 47, "Input",ExpressionUUID->"3614a5d8-d8fc-cc47-8730-e84d343ff0bf"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
