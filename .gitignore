@@ -1,5 +1,13 @@
+#
+# Disallow binary measurement data files
+# Their size spans multiple gigabytes - if you want them: shoot me an email - Julien Kluge
+#
+*.bin
+
+#
 # For PCBs designed using KiCad: https://www.kicad.org/
 # Format documentation: https://kicad.org/help/file-formats/
+#
 
 # Temporary files
 *.000
