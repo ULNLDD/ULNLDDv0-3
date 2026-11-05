@@ -1,0 +1,16 @@
+version = 1
+
+[[annotations]]
+path = "hardware/**"
+SPDX-FileCopyrightText = "2026 Your Name <you@example.com>"
+SPDX-License-Identifier = "CERN-OHL-P-2.0"
+
+[[annotations]]
+path = ["docs/**", "data/**", "README.md"]
+SPDX-FileCopyrightText = "2026 Your Name <you@example.com>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = "scripts/**"
+SPDX-FileCopyrightText = "2026 Your Name <you@example.com>"
+SPDX-License-Identifier = "MIT"

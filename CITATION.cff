@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this design, please cite it as below."
+type: software
+title: "ULNLDDv0-3"
+authors:
+  - family-names: Kluge
+    given-names: Julien
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+    affiliation: "Ferdinand-Braun-Institut gGmbH"
+repository-code: "https://github.com/ULNLDD/ULNLDDv0-3"
+license: CERN-OHL-P-2.0
+version: "1.0.0"
+date-released: "2026-11-05"
+keywords:
+  - open hardware
+# doi: 10.5281/zenodo.XXXXXXX   # add after first release
